@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     -  run: |
-        echo ${{secrets.SSH_PRIVATE_KEY}} &> ~/ssh_key
+        echo "${{secrets.SSH_PRIVATE_KEY}}" &> ~/ssh_key
         ssh -i ~/ssh_key ubuntu@13.232.36.217
         cd Devops-1 && git pull 
         pnpm install
