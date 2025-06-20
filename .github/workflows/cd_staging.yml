@@ -8,8 +8,7 @@ jobs:
     name: Deploying Everything to the Staging Environment
     runs-on: ubuntu-latest
     steps:
-      name: SSH into server
-      run: |
+    -  run: |
         echo ${{secrets.SSH_PRIVATE_KEY}} &> ~/ssh_key
         ssh -i ~/ssh_key ubuntu@13.232.36.217
         cd Devops-1 && git pull 
