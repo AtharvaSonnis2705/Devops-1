@@ -5,9 +5,9 @@ on:
       - "main"
 
 jobs:
-  uses: ubuntu-latest
   redeploy_everything:
     name: Deploying Everything to the Staging Environment
+    runs-on: ubuntu-latest
     steps:
       name: SSH into server
       run: |
