@@ -16,7 +16,7 @@ app.post("/signup", async(req, res) => {
 
     const user = await prismaClient.users.create({
         data: {
-            username: username,
+            username: username, 
             password: password
         }
     })
@@ -31,5 +31,4 @@ app.post("/signup", async(req, res) => {
 
 app.listen(3002, () => {
     console.log("server listening on the port 3000");
-
 })
